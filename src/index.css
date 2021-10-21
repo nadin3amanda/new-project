@@ -5,7 +5,6 @@
 
 html {
   font-family: "ZCOOL QingKe HuangYou", cursive;
-  font-size: 16px;
   color: #fff;
 }
 
@@ -13,6 +12,5 @@ body {
   margin: 0;
   background-color: #3f3f3f;
   background-image: url(https://images.pexels.com/photos/6498998/pexels-photo-6498998.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-  opacity: 0.5;
   font-family: "Montserrat", sans-serif;
 }
