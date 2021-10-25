@@ -6,15 +6,14 @@ const NewExpense = (props) => {
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
       ...enteredExpenseData,
-      id: Math.randon().toString(),
+      id: Math.random().toString(),
     };
     props.onAddExpense(expenseData);
-
   };
-  
+
   return (
     <div className="new-expense">
-      <Expenseform onSaveExpenseData></Expenseform>
+      <Expenseform onSaveExpenseData={saveExpenseDataHandler}></Expenseform>
     </div>
   );
 };
