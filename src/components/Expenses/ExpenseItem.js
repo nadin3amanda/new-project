@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
 import "./Expenses.js";
 import Card from "../UI/Card";
 
 const ExpenseItem = (props) => {
-  //function clickHandler() {}
   const [title, setTitle] = useState(props.title);
-  console.log('ExpenseItem evaluated by React');
+  console.log("ExpenseItem evaluated by React");
 
   const clickHandler = () => {
-    setTitle('Updated!');
+    setTitle("Updated!");
     console.log(title);
   };
   return (
@@ -21,8 +20,8 @@ const ExpenseItem = (props) => {
         <div className="expense-item__price"> ${props.amount} </div>
       </div>
       <button onClick={clickHandler}> Change Title </button>
-    </Card >
+    </Card>
   );
-}
+};
 
 export default ExpenseItem;
