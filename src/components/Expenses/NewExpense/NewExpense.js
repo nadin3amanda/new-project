@@ -11,10 +11,15 @@ const NewExpense = (props) => {
       id: Math.random().toString(),
     };
     props.onAddExpense(expenseData);
+    setIsEditing(false);
   };
 
   const startEditingHandler = () => {
     setIsEditing(true);
+  };
+
+  const stopEditingHandler = () => {
+    setIsEditing(false);
   };
 
   return (
@@ -23,7 +28,10 @@ const NewExpense = (props) => {
         <button onClick={startEditingHandler}> Add New Expense </button>
       )}
       {isEditing && (
-        <Expenseform onSaveExpenseData={saveExpenseDataHandler}></Expenseform>
+        <Expenseform
+          onSaveExpenseData={saveExpenseDataHandler}
+          onCancel={stopEditingHandler}
+        ></Expenseform>
       )}
     </div>
   );
